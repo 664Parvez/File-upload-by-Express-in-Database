@@ -27,7 +27,7 @@ const storage = multer.diskStorage({
 })
 const upload = multer({ storage : storage })
 
-
+// File Send by Post Method
 app.post('/', upload.single('file'), async (req, res) => {
     try{
         const newData = new Createmodel({
